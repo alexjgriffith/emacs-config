@@ -1,0 +1,7 @@
+*
+!.gitignore
+!init.el
+!custom
+!custom/0*
+!Cask
+!readme.org

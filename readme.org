@@ -1,0 +1,12 @@
+Minimal emacs configuration
+
+** Installation
+Requires [[https://github.com/cask/cask][cask]]
+
+#+BEGIN_SRC bash
+cd /tmp
+git clone https://github.com/alexjgriffith/emacs-config.git
+mv -rf /tmp/emacs-config/ ~/.emacs.d/
+cd ~/.emacs.d/
+cask install .
+#+END_SRC
