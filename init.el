@@ -1,8 +1,13 @@
-;; (package-initialize)
-
 (setq default-directory "~/")
 
-(require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
+(defvar cask-file-location nil)
+
+(cond ((equal system-type 'gnu/linux)
+       (setq cask-file-location "~/.cask/cask.el") )
+      ((equal system-type 'darwin)
+       (setq cask-file-location "/usr/local/share/emacs/site-lisp/cask/cask.el")))
+
+(require 'cask cask-file-location)
 
 (cask-initialize)
 
@@ -64,17 +69,5 @@
 
 (mapc 'load (directory-files "~/.emacs.d/custom" t "^[0-9]+.*\.el$"))
 
-
-
-(load "~/.emacs.d/capture/Capture.el")
-;; (find-file "~/Development/love/slimes/play-state.fnl")
-
 (with-eval-after-load 'ox
   (require 'ox-hugo))
-
-;; (require 'ox-hugo-auto-export)
-;; (find-file "~/Desktop/sunsun/")
-;;(define-key-after fennel-mode-map "\M-\C-x" #'run-love)
-
-(eval-after-load 'fennel-mode
-  '(define-key inf-clojure-minor-mode-map "\M-\C-x"  #'run-love))
