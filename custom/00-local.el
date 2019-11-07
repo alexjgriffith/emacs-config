@@ -1,4 +1,5 @@
 (defun dev-local ()
+  (load "~/.emacs.d/capture/Capture.el")
   (let ((strings '("/opt/local/bin/"
                  "~/bin/"
                  "~/.cargo/bin/"
@@ -15,4 +16,4 @@
   (setenv "PATH" (concat (getenv "PATH") (replace-regexp-in-string "/" "/" (replace-regexp-in-string ".$" "" (apply #'concat (mapcar (lambda(x) (concat x ":")) strings))))))
   (setq exec-path (append exec-path strings))))
 
-(cond ((equal (system-name) "dev.local")) (dev-local))
+(cond ((equal (system-name) "dev.local") (dev-local)))
