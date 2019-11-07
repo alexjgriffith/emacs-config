@@ -1,5 +1,6 @@
 (defun dev-local ()
   (load "~/.emacs.d/capture/Capture.el")
+  (set-default-font "source code pro")
   (let ((strings '("/opt/local/bin/"
                  "~/bin/"
                  "~/.cargo/bin/"
