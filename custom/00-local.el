@@ -19,6 +19,8 @@
 
 (defun dev-work ()
   (load "~/.emacs.d/lisp/yank-gets.el")
+  (add-to-list 'load-path "~/.emacs.d/lisp/sorbae/lisp")
+  (require 'sorbae)
   (setenv "SHELL" "c:/users/ALGRIFFI/home/algriffi/binaries/msys64/usr/bin/bash.exe")
   (setq explicit-shell-file-name
         "c:/users/ALGRIFFI/home/algriffi/binaries/msys64/usr/bin/bash.exe")
