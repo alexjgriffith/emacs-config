@@ -4,6 +4,8 @@
 
 (cond ((equal system-type 'gnu/linux)
        (setq cask-file-location "~/.cask/cask.el") )
+      ((equal system-type 'windows-nt)
+       (setq cask-file-location "~/.cask/cask.el") )
       ((equal system-type 'darwin)
        (setq cask-file-location "/usr/local/share/emacs/site-lisp/cask/cask.el")))
 
