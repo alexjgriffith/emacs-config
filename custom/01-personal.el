@@ -1,5 +1,6 @@
 (setq frame-resize-pixelwise t)
 (load-theme 'brutalist)
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (defalias 'yes-or-no-p 'y-or-n-p)
 (setq user-full-name "Alexander, Griffith")
 (setq user-email "griffitaj@gmail.com")
